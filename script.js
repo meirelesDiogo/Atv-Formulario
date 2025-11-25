@@ -5,7 +5,6 @@ document.getElementById("telefone").addEventListener("input", function(e) {
     // limita a 11 dígitos
     v = v.substring(0, 11);
 
-    // aplica a máscara de forma simples
     if (v.length >= 7) {
         e.target.value = `(${v.substring(0,2)}) ${v.substring(2,7)}-${v.substring(7)}`;
     } else if (v.length > 2) {
@@ -14,3 +13,7 @@ document.getElementById("telefone").addEventListener("input", function(e) {
         e.target.value = v;
     }
 });
+
+function alerta(){
+   alert("Formulário enviado com sucesso")
+}
